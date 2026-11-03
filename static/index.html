@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="resources/icon.png">
+</head>
+<body>
+    <header>
+        <div class="splash_anchor">
+            <img class="craftle" src="resources/craftle.png", alt="Craftle">
+            <p>Случайная игра</p>
+            <p class="splash">Made by Copter533!</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="tooltip" hidden></div>
+        <section class="panel">
+            <h2>Создание</h2>
+            <div class="workbench">
+                <div class="grid" id="craft_grid"> <!-- Заполняется через JS --> </div>
+
+                <svg class="arrow" viewBox="0 0 22 15" aria-hidden="true">
+                    <path d="M0 6h15V2h2v1h1v1h1v1h1v1h1v1h1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2V9H0z"/>
+                </svg>
+
+                <div class="slot result" id="result" title="Результат"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn" id="clear_btn">Очистить</button>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Материалы</h2>
+            <div class="palette" id="palette"> <!-- Заполняется через JS --> </div>
+        </section>
+
+        <div class="history" id="history">
+            <h2>Попытки (6/6)</h2>
+            <div id="history_container"> <!-- Заполняется через JS --> </div>
+        </div>
+
+        <dialog id="end_dialog" class="panel">
+            <h2 id="end_title"></h2>
+            <p id="end_text"></p>
+            <div class="grid small" id="end_solution"></div>
+            <div class="controls">
+                <button class="btn" id="end_new_btn">Новая игра</button>
+                <button class="btn" id="end_close_btn">Закрыть</button>
+            </div>
+        </dialog>
+
+        <!-- Правила нужно передвинуть -->
+        <section class="panel rules">
+            <h2>Как играть</h2>
+            <p>Выбери материал внизу и кликни по клетке верстака</p>
+            <ul class="legend rules">
+                <li><span class="swatch green"></span> предмет на своём месте</li>
+                <li><span class="swatch yellow"></span> предмет есть в рецепте, но в другой клетке или лишний</li>
+                <li><span class="swatch gray"></span> такого предмета в рецепте нет</li>
+            </ul>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

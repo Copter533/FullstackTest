@@ -1,0 +1,20 @@
+# Ассеты Mojang: текстуры, модели, рецепты, языковые файлы — не наше, не публикуем
+mc_resources/
+
+# Окружение и кэш Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Настройки IDE
+.idea/
+.vscode/
+
+# Секреты и локальные настройки
+.env
+
+database.py
+game_builder.py
+sql/
+legacy/
